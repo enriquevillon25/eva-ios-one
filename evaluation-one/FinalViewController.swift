@@ -8,15 +8,17 @@
 import UIKit
 
 class FinalViewController: UIViewController {
-
+    var nombre = ""
+    @IBOutlet weak var name: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        print("entrando")
+        print("entrando", nombre)
+        name.text = nombre
         // Do any additional setup after loading the view.
     }
     
 
+  
     /*
     // MARK: - Navigation
 

@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var names = ["Enrique","Gracia"]
-
+    var nameSelected = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,9 +28,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("hola", names[indexPath.row])
+        nameSelected = names[indexPath.row]
+        performSegue(withIdentifier: "navegar", sender: self)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let final = segue.destination as? FinalViewController
+        final?.nombre = nameSelected
+    }
 }
 

@@ -36,9 +36,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="lCK-yQ-ZBX" kind="show" id="qPu-qh-MNT"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -57,6 +54,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AH7-c3-aRC"/>
+                    <connections>
+                        <segue destination="lCK-yQ-ZBX" kind="show" identifier="navegar" id="T86-sD-vDj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,14 +87,31 @@
                     <view key="view" contentMode="scaleToFill" id="6Ax-PK-WqH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MY-tP-hJh">
+                                <rect key="frame" x="0.0" y="388" width="414" height="174"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8Ob-ND-cXw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6MY-tP-hJh" firstAttribute="top" secondItem="8Ob-ND-cXw" secondAttribute="top" constant="300" id="KXg-Om-7WD"/>
+                            <constraint firstItem="6MY-tP-hJh" firstAttribute="leading" secondItem="8Ob-ND-cXw" secondAttribute="leading" id="MFb-rv-dgj"/>
+                            <constraint firstItem="8Ob-ND-cXw" firstAttribute="bottom" secondItem="6MY-tP-hJh" secondAttribute="bottom" constant="300" id="QOO-Uq-JxX"/>
+                            <constraint firstItem="8Ob-ND-cXw" firstAttribute="trailing" secondItem="6MY-tP-hJh" secondAttribute="trailing" id="fxr-97-el4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zw8-1x-QpM"/>
+                    <connections>
+                        <outlet property="name" destination="6MY-tP-hJh" id="J68-fm-dpQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cky-nF-fP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="84"/>
+            <point key="canvasLocation" x="1537.68115942029" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
